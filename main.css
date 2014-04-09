@@ -1,0 +1,28 @@
+html {
+	margin: 0;
+	padding: 0;
+}
+
+.listener {
+	padding: 1em;
+	background-color: rgba(100,100,100,.7);
+	width: 100px;
+}
+
+input {
+
+}
+
+.listener:hover {
+	background-color:  rgba(100,100,100,.3);
+	cursor: pointer;
+}
+
+li {
+	list-style-type: none;
+}
+
+input {
+	width: 100px;
+	padding: 1em;
+}
