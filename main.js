@@ -7,6 +7,9 @@ $(document).on('ready', function(){
 
 		// });
 	});
+	$(".userInfo").on("mouseover", function(){
+		$(this).css("cursor", "pointer");
+	})
 });
 
 
