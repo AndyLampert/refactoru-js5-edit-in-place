@@ -2,34 +2,38 @@
 $(document).on('ready', function(){
 	$(".userInfo").on("click", function() {
 		$(this).hide();
-		// when I hide, I want to pull the text and put it in the input
-		$(this).before().css(".userInput", "display:block");
+		var inputVar = $('<input class="userInput">');
+		var currentInfo = $(this);
+
+		$(this).after(inputVar);
+		inputVar.on('blur', function(){
+			$(this).remove();
+			currentInfo.show();
+			( $(this).val() );
+		});
 	});
 
-
-// <input id='input-id' class='input' type='text'>
-// select the element and call .focus()
-
-
-$("hidden input").on("blur", function(){
-	var userInput = $("#input-id").val();
-	$(this).text("#input-id");
-			// get value with .val()
-			// get the text with .text()
-		});
+	// $(document).on("blur", ".userInput", function(){
+	//	var inputVal = $(".userInput").val();
+	//	$(this).text("inputVal");
+	// });
 });
 
-// CSS is more declaritive/reusable. move to CSS
-// (rule of thumb is that if it can be done in CSS, do it in CSS)
-//	$(".userInfo").on("mouseover", function(){
-//		$(this).css("cursor", "pointer");
-//	});
-// });
 
+// Requirements
+// Part I
 
-// Ask Raine
-// How to get the input style to match the .userInfo block
-// get hints on how to finish step 4:
+// Create a static user profile with HTML and CSS.
+// Add a click handler to each text block.
+// When a text block is clicked, hide the text block and display an input in its place. The input should take up the same space as the text block so that the transition from text to editable field is seamless and doesn't throw off the layout.
+// When the input is blurred:
 // Hide the input.
 // Show the text block.
 // Update the text block with the new text.
+// Part II
+
+// Refactor your code so that you can apply a class 'editable' to any element within your html and when the page loads your script will automatically make those elements in-place editable.
+
+// Bonus I
+
+// Implement in-place editing with with the X-Editable library. Ignore all the instructions for Ajax and POST requests and follow the note under "Work LOCALLY" to make it work client-side.
