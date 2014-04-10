@@ -1,28 +1,33 @@
+* {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */;
+}
+
 html {
 	margin: 0;
 	padding: 0;
 }
 
-.userInfo {
+.userInfo, 
+input {
 	padding: 1em;
-	background-color: rgba(100,100,100,.7);
 	width: 100px;
 }
 
-input {
-
+.userInfo {
+	background-color: rgba(100,100,100,.7);
 }
 
-.listener:hover {
+.userInfo:hover {
 	background-color:  rgba(100,100,100,.3);
 	cursor: pointer;
 }
 
-li {
-	list-style-type: none;
+.userInput {
+	display: none;
 }
 
-input {
-	width: 100px;
-	padding: 1em;
+li {
+	list-style-type: none;
 }
