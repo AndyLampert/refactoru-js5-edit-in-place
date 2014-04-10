@@ -1,24 +1,27 @@
 // listens for the DOM to load
+// $(document).on('ready', function(){
+// 	$('.userInfo').on('click', function(){
+// 		$(this).hide();
+// 		$(this).after().append('<input class="userInput"'>);
+// 	});
+// });
+
+
 $(document).on('ready', function(){
 	$(".userInfo").on("click", function() {
 		$(this).hide();
 		var inputVar = $('<input class="userInput">');
 		var currentInfo = $(this);
-
 		$(this).after(inputVar);
+
 		inputVar.on('blur', function(){
 			$(this).remove();
 			currentInfo.show();
-			( $(this).val() );
+			currentInfo.text( $(this).val() );
 		});
+		
 	});
-
-	// $(document).on("blur", ".userInput", function(){
-	//	var inputVal = $(".userInput").val();
-	//	$(this).text("inputVal");
-	// });
 });
-
 
 // Requirements
 // Part I
